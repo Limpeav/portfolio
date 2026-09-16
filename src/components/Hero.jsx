@@ -39,7 +39,7 @@ export default function Hero({ personal }) {
 
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch('/Hour_Limpeav_CV.pdf');
+      const response = await fetch(`${import.meta.env.BASE_URL}Hour_Limpeav_CV.pdf`);
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
