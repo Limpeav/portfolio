@@ -37,9 +37,18 @@ function useTypewriter(words, speed = 80, delay = 1500) {
 export default function Hero({ personal }) {
   const typedRole = useTypewriter(['Backend Developer', 'Flutter Developer'], 80, 1500);
 
-  const handleDownloadCV = async () => {
+  const [isDownloadingCV, setIsDownloadingCV] = useState(false);
+
+  const handleDownloadCV = async (e) => {
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}Hour_Limpeav_CV.pdf`);
+      setIsDownloadingCV(true);
+      const cvUrl = `${import.meta.env.BASE_URL}Hour_Limpeav_CV.pdf`;
+      const response = await fetch(cvUrl);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const blob = await response.blob();
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
@@ -48,9 +57,24 @@ export default function Hero({ personal }) {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+
+      // Clean up object URL after download has safely initiated
+      setTimeout(() => {
+        URL.revokeObjectURL(url);
+        setIsDownloadingCV(false);
+      }, 1500);
     } catch (err) {
-      console.error('CV download failed:', err);
+      console.warn('Blob download encountered an issue, falling back to direct link:', err);
+      setIsDownloadingCV(false);
+      // Fallback: direct download link
+      const fallbackLink = document.createElement('a');
+      fallbackLink.href = `${import.meta.env.BASE_URL}Hour_Limpeav_CV.pdf`;
+      fallbackLink.download = 'Hour_Limpeav_CV.pdf';
+      fallbackLink.target = '_blank';
+      fallbackLink.rel = 'noopener noreferrer';
+      document.body.appendChild(fallbackLink);
+      fallbackLink.click();
+      document.body.removeChild(fallbackLink);
     }
   };
 
@@ -100,9 +124,10 @@ export default function Hero({ personal }) {
               onClick={handleDownloadCV}
               className="btn btn-secondary resume-btn"
               title="Download Hour Limpeav CV (PDF)"
+              disabled={isDownloadingCV}
             >
               <Download size={16} />
-              <span>Download CV</span>
+              <span>{isDownloadingCV ? 'Downloading...' : 'Download CV'}</span>
             </button>
           </div>
 
