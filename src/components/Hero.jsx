@@ -159,17 +159,6 @@ export default function Hero({ personal }) {
         </div>
       </div>
 
-      {/* Metrics Counter Bar */}
-      <div className="container">
-        <div className="hero-stats-grid glass-card">
-          {personal.stats.map((stat, idx) => (
-            <div key={idx} className="stat-item">
-              <div className="stat-value text-gradient">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }
