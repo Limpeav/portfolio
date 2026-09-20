@@ -1,5 +1,3 @@
-import foodDeliveryImage from '../assets/food_delivery.jpg';
-
 export const portfolioData = {
   personal: {
     name: "Hour Limpeav",
@@ -58,7 +56,7 @@ export const portfolioData = {
   projects: [
     {
       id: "ecommerce-platform",
-      title: "Cherish Baby Store - E-Commerce Platform",
+      title: "Cherish Baby Store — Multi-Role E-Commerce System",
       category: "Full Stack",
       tags: ["Node.js", "Express.js", "React.js", "Flutter", "MongoDB", "Tailwind CSS", "Bakong KHQR"],
       image: `${import.meta.env.BASE_URL}images/ecommerce-combined-banner.jpg`,
@@ -194,42 +192,6 @@ export const portfolioData = {
           ]
         }
       ]
-    },
-    {
-      id: "student-management-system",
-      title: "Student Management System — Spring Boot & Next.js",
-      category: "Full Stack",
-      tags: ["Spring Boot", "Spring Security", "JPA/Hibernate", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS", "RESTful API"],
-      image: `${import.meta.env.BASE_URL}images/student-management-system.jpg`,
-      description: "A full-stack student management platform with secure admin authentication and a responsive dashboard for managing student records. Built with Spring Boot, Spring Security, JPA/Hibernate, and PostgreSQL on the backend, and Next.js, TypeScript, and Tailwind CSS on the frontend — featuring RESTful API integration and complete student CRUD operations.",
-      highlights: [
-        "Secure Admin Authentication: Spring Security-powered login with JWT-based session management and role-based access control",
-        "Responsive Dashboard: Modern Next.js & TypeScript admin UI built with Tailwind CSS for managing all student records at a glance",
-        "Complete Student CRUD: Create, read, update, and delete student records via clean RESTful API endpoints",
-        "Spring Data JPA / Hibernate: Robust ORM layer with PostgreSQL for reliable, scalable relational data persistence",
-        "RESTful API Integration: Well-structured API consumed by the Next.js frontend for seamless full-stack communication",
-        "Type-Safe Frontend: Fully typed TypeScript codebase on the Next.js client for maintainable and error-free UI development"
-      ],
-      metrics: "Spring Boot · Next.js · PostgreSQL · Full CRUD",
-      liveUrl: "https://github.com/Limpeav",
-      githubUrl: "https://github.com/Limpeav",
-      featured: true
-    },
-    {
-      id: "cravery-food-delivery",
-      title: "Cravery — Food Delivery App",
-      category: "Mobile",
-      tags: ["Flutter", "Spring Boot", "Google Authentication", "Maps", "Payments", "Notifications"],
-      image: foodDeliveryImage,
-      description: "Cravery is a Flutter-based food delivery customer app integrated with a Spring Boot backend. It features Google authentication, Cambodian phone validation, restaurant and food discovery, cart and checkout, payments, real-time order tracking, maps, notifications, and customer reviews.",
-      highlights: [
-        "Flutter customer app connected to a Spring Boot backend",
-        "Google authentication and Cambodian phone validation",
-        "Restaurant and food discovery with cart and checkout",
-        "Payments, real-time order tracking, maps, notifications, and customer reviews"
-      ],
-      metrics: "Flutter · Spring Boot · Real-Time Tracking",
-      featured: true
     },
     {
       id: "foodpanda-flutter-clone",

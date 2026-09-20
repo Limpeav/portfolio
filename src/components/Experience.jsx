@@ -20,10 +20,17 @@ export default function Experience({ experience }) {
           </p>
         </div>
 
-        {/* Experience Grid */}
+        {/* Timeline */}
         <div className="timeline-container">
+          <div className="timeline-spine" />
+
           {experience.map((item, idx) => (
             <div key={idx} className="timeline-item">
+              {/* Timeline Marker */}
+              <div className="timeline-marker">
+                <div className="marker-dot" />
+              </div>
+
               {/* Timeline Card */}
               <div className="timeline-card glass-card">
                 <div className="timeline-card-header">
