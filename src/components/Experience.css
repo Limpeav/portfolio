@@ -1,119 +1,192 @@
+/* ─── Section wrapper ─────────────────────────────────── */
 .experience-section {
   position: relative;
 }
 
-.timeline-container {
-  position: relative;
+/* ─── Two-column grid ─────────────────────────────────── */
+.tl-two-col {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0;
 }
 
-.timeline-spine {
-  display: none;
+/* ─── Column title (Work Experience / Education) ─────── */
+.tl-col-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.01em;
 }
 
-.timeline-item {
+/* ─── Column body — positions the spine & entries ───── */
+.tl-col-body {
   position: relative;
+  padding-left: 2.5rem;
+}
+
+/* Vertical spine line */
+.tl-spine {
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(99, 102, 241, 0.5),
+    rgba(139, 92, 246, 0.15)
+  );
+  border-radius: 2px;
+}
+
+/* ─── Single timeline entry ───────────────────────────── */
+.tl-entry {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tl-entry:last-child {
   margin-bottom: 0;
 }
 
-.timeline-card {
-  height: 100%;
-  padding: 2.25rem;
+/* ─── Icon node (circle on the spine) ────────────────── */
+.tl-node {
+  position: absolute;
+  left: -2.5rem;
+  top: 1.35rem;
+  z-index: 2;
 }
 
-.timeline-card-header {
+.tl-node-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(139,92,246,0.35));
+  border: 2px solid rgba(99, 102, 241, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a5b4fc;
+  flex-shrink: 0;
+  backdrop-filter: blur(4px);
+}
+
+/* ─── Card ────────────────────────────────────────────── */
+.tl-card {
+  width: 100%;
+  padding: 1.35rem 1.5rem;
+  border-radius: 12px;
+}
+
+/* Title + date badge row */
+.tl-card-top {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
+  margin-bottom: 0.45rem;
 }
 
-.timeline-role {
-  font-size: 1.35rem;
+.tl-role {
+  font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 0.35rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+  margin: 0;
 }
 
-.timeline-company-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.timeline-company {
-  color: var(--accent-primary);
+/* Date badge */
+.tl-period-badge {
+  font-size: 0.78rem;
   font-weight: 600;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 20px;
+  padding: 0.2rem 0.75rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.timeline-dot-sep {
-  color: var(--text-muted);
+/* Type label (Training / Academic Projects / Currently studying / Studied) */
+.tl-label {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
 }
 
-.timeline-location {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
+.tl-label-default {
+  color: #a78bfa;
 }
 
-.timeline-period-badge {
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
-  color: var(--text-accent);
+.tl-label-active {
+  color: #34d399;
 }
 
-.timeline-desc {
-  font-size: 1rem;
+/* Description text */
+.tl-desc {
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
-.timeline-achievements {
+/* ─── Bullet list ─────────────────────────────────────── */
+.tl-bullets {
+  list-style: none;
+  margin: 0 0 0.9rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
-  margin-bottom: 1.5rem;
+  gap: 0.5rem;
 }
 
-.achievement-row {
+.tl-bullet {
   display: flex;
   align-items: flex-start;
-  gap: 0.65rem;
-  font-size: 0.925rem;
+  gap: 0.55rem;
+  font-size: 0.875rem;
   color: #cbd5e1;
   line-height: 1.5;
 }
 
-.achieve-icon {
-  color: var(--accent-emerald);
+.tl-dot {
+  color: #7c3aed;
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 5px;
+  fill: #7c3aed;
 }
 
-.timeline-tech-stack {
+/* ─── Tech tags ───────────────────────────────────────── */
+.tl-tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  padding-top: 1.25rem;
+  gap: 0.4rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--border-subtle);
+  margin-top: 0.25rem;
 }
 
+/* ─── Responsive ──────────────────────────────────────── */
 @media (max-width: 768px) {
-  .timeline-container {
+  .tl-two-col {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-  .timeline-card {
-    padding: 1.5rem;
+  .tl-card {
+    padding: 1.1rem 1.25rem;
+  }
+
+  .tl-role {
+    font-size: 0.97rem;
   }
 }

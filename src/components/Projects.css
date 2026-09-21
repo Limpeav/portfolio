@@ -37,8 +37,8 @@
 /* Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
-  gap: 2.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
 }
 
 .project-card {
@@ -125,16 +125,16 @@
 }
 /* Card Body */
 .project-body {
-  padding: 1.75rem 2rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .project-title {
-  font-size: 1.45rem;
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.65rem;
 }
 
 .project-title a {
@@ -148,10 +148,10 @@
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   flex-grow: 1;
 }
 
@@ -222,12 +222,18 @@
   color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 640px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
   .project-body {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
   }
 }
 

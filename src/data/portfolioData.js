@@ -291,42 +291,49 @@ export const portfolioData = {
 
   experience: [
     {
-      period: "2022 — Present",
-      role: "Backend Developer Student (Semester II, Year 4)",
-      company: "Norton University",
-      location: "Phnom Penh, Cambodia",
-      description: "Specializing in Software Development with strong interest in Backend Development, focusing on Java Spring Boot, Node.js, and Database Engineering.",
-      achievements: [
-        "Engineered end-to-end production-grade school projects including E-Commerce and Enterprise Task Management platforms.",
-        "Strengthened expertise in Spring Boot, Spring Data JPA/Hibernate, PostgreSQL, MongoDB, and JWT authentication.",
-        "Collaborated with academic peers in agile team settings, leading API contract designs and Git workflow standards."
-      ],
-      technologies: ["Java", "Spring Boot", "PostgreSQL", "Node.js", "Express.js", "MongoDB", "Flutter"]
-    },
-    {
+      type: "experience",
+      label: "Academic Projects",
       period: "2023 — 2024",
-      role: "School Project Lead — E-Commerce & Task Management",
+      role: "Academic Project Lead — E-Commerce & Task Management",
       company: "Academic Project Initiatives",
       location: "Phnom Penh, Cambodia",
-      description: "Spearheaded backend architecture and multiplatform integration across web and mobile student software projects.",
+      description: "Led and contributed to university software projects involving web applications, mobile applications, and REST API integration.",
       achievements: [
-        "Designed and implemented RESTful API architecture connecting React.js web and Flutter mobile applications.",
-        "Successfully integrated Bakong KHQR payment processing and Google Maps location services.",
-        "Managed comprehensive API test suites using Postman and enforced clean Git commit practices."
+        "Designed and implemented REST APIs connecting web and Flutter mobile applications.",
+        "Developed mobile features using Flutter and Dart, including API integration and state management.",
+        "Integrated Bakong KHQR payment and Google Maps location services in an e-commerce project.",
+        "Used Postman to test and validate REST API endpoints.",
+        "Collaborated with team members using Git and GitHub throughout project development."
       ],
-      technologies: ["Node.js", "Express.js", "React.js", "Flutter", "Postman", "MongoDB"]
+      technologies: ["Flutter", "Dart", "Node.js", "Express.js", "React.js", "MongoDB", "Postman"]
     },
     {
+      type: "education",
+      label: "Studied",
       period: "2016 — 2022",
-      role: "High School Diploma",
-      company: "Sovannaphumi School High School",
+      role: "Houn Sean Koh Along Chen Primary School, Sovanaphumi Secondary School, Sovanaphumi High School",
+      company: "",
       location: "Cambodia",
-      description: "Graduated with strong foundation in mathematics, logical problem solving, and introductory computer science.",
+      description: "",
       achievements: [
-        "Graduated High School in 2022.",
-        "Active participant in science and mathematics academic competitions."
+        "2016 : Graduated Primary School at Houn Sean Koh Along Chen Primary School",
+        "2019 : Graduated Secondary School at Sovanaphumi Secondary School",
+        "2022 : Graduated High School at Sovanaphumi High School"
       ],
-      technologies: ["Mathematics", "Computer Literacy", "English"]
+      technologies: []
+    },
+    {
+      type: "education",
+      label: "Currently studying",
+      period: "2022 — Present",
+      role: "NORTON UNIVERSITY",
+      company: "",
+      location: "Phnom Penh, Cambodia",
+      description: "",
+      achievements: [
+        "Fourth-year student in Semester II, specializing in (Software Development) at NORTON UNIVERSITY."
+      ],
+      technologies: []
     }
   ],
 
