@@ -1,10 +1,10 @@
 import React from 'react';
-import { User, GraduationCap, Server, Compass, Layers, ArrowRight } from 'lucide-react';
+import { User, GraduationCap, Smartphone, Compass, Layers, ArrowRight } from 'lucide-react';
 import './About.css';
 
 export default function About({ personal }) {
-  const backendTech = ['Java', 'Spring Boot', 'Node.js', 'Express.js', 'PostgreSQL', 'MongoDB'];
-  const fullstackTech = ['React.js', 'Tailwind CSS', 'Flutter', 'RESTful APIs'];
+  const primaryTech = ['Flutter', 'Dart', 'BLoC', 'REST APIs', 'Firebase'];
+  const supportingTech = ['Java', 'Spring Boot', 'Node.js', 'MongoDB', 'PostgreSQL'];
 
   return (
     <section id="about" className="section about-section">
@@ -16,10 +16,10 @@ export default function About({ personal }) {
             <span>About Me</span>
           </div>
           <h2 className="section-title">
-            A passionate developer crafting <span className="text-gradient">digital stories</span>
+            A passionate developer crafting <span className="text-gradient">mobile experiences</span>
           </h2>
           <p className="section-subtitle">
-            Building reliable REST APIs, database architectures, and scalable full-stack applications.
+            Building beautiful, responsive, and user-friendly mobile applications with Flutter and Dart.
           </p>
         </div>
 
@@ -33,13 +33,13 @@ export default function About({ personal }) {
 
             <div className="about-paragraphs">
               <p className="story-p">
-                I am a Software Development student at <strong>Norton University</strong> with a strong focus and genuine interest in <strong>Backend Development</strong>. I enjoy designing clean, reliable REST APIs and building scalable full-stack applications that solve real-world problems.
+                I am a Software Development student at <strong>Norton University</strong> with a strong focus and genuine interest in <strong>Flutter Development</strong>. I enjoy building beautiful, responsive, and user-friendly mobile applications that solve real-world problems.
               </p>
               <p className="story-p">
-                My primary backend technologies include <strong>Java, Spring Boot, Node.js, Express.js, PostgreSQL, and MongoDB</strong>. In addition to backend systems, I have practical experience building modern, responsive user interfaces using <strong>React.js, Tailwind CSS</strong>, and cross-platform mobile apps with <strong>Flutter</strong>.
+                My primary mobile development technologies include <strong>Flutter and Dart</strong>, with experience building cross-platform mobile applications. I also have experience integrating <strong>REST APIs, BLoC, authentication, and backend services</strong> to create functional and user-friendly applications.
               </p>
               <p className="story-p story-p-last">
-                I am currently looking for a <strong>Backend Developer Internship</strong> where I can continue to sharpen my technical abilities, gain valuable industry experience, and contribute meaningfully as part of a development team.
+                I am currently looking for a <strong>Flutter Developer Internship</strong> where I can strengthen my mobile development skills, gain valuable industry experience, and contribute meaningfully as part of a development team.
               </p>
             </div>
 
@@ -70,12 +70,12 @@ export default function About({ personal }) {
 
             <div className="fact-card glass-card">
               <div className="fact-icon-box box-indigo">
-                <Server size={20} />
+                <Smartphone size={20} />
               </div>
               <div className="fact-details">
                 <div className="fact-label">Specialization</div>
-                <div className="fact-title">Backend Development</div>
-                <div className="fact-desc">REST APIs, DB Design & Architecture</div>
+                <div className="fact-title">Flutter Development</div>
+                <div className="fact-desc">Cross-Platform Mobile Applications</div>
               </div>
             </div>
 
@@ -85,7 +85,7 @@ export default function About({ personal }) {
               </div>
               <div className="fact-details">
                 <div className="fact-label">Opportunity Target</div>
-                <div className="fact-title">Backend Developer Internship</div>
+                <div className="fact-title">Flutter Developer Internship</div>
                 <div className="fact-desc">Available for immediate placement</div>
               </div>
             </div>
@@ -97,12 +97,12 @@ export default function About({ personal }) {
                 <span className="tech-box-title">Key Technologies</span>
               </div>
               <div className="tech-box-pills">
-                {backendTech.map(tech => (
+                {primaryTech.map(tech => (
                   <span key={tech} className="badge badge-tech backend-badge">
                     {tech}
                   </span>
                 ))}
-                {fullstackTech.map(tech => (
+                {supportingTech.map(tech => (
                   <span key={tech} className="badge badge-tech">
                     {tech}
                   </span>

@@ -44,6 +44,20 @@
   backdrop-filter: blur(8px);
 }
 
+.status-pill-animated {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.status-pill-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.status-pill-hidden {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
 .status-text {
   font-size: 0.85rem;
   font-weight: 600;

@@ -5,7 +5,7 @@ export const portfolioData = {
     name: "Hour Limpeav",
     role: "Backend Developer",
     secondaryRole: "Spring Boot / Java · Node.js · REST APIs · PostgreSQL & MongoDB",
-    tagline: "Fourth-year Software Development student at Norton University with a strong interest in Backend Development, building RESTful APIs and backend applications using Java, Spring Boot, Node.js, Express.js, MongoDB, and PostgreSQL.",
+    tagline: "Fourth-year Software Development student at Norton University with a strong interest in Flutter and mobile app development, building beautiful, responsive, and user-friendly applications. Passionate about creating real-world solutions and continuously learning new technologies to grow as a Flutter developer.",
     bio: "I'm a passionate software development student at Norton University with experience building RESTful APIs and backend applications using Java, Spring Boot, Node.js, Express.js, React.js, Flutter, MongoDB, and PostgreSQL. I have developed e-commerce applications involving authentication, product management, order processing, database integration, and REST APIs. I am currently strengthening my skills in Spring Boot, JPA/Hibernate, PostgreSQL, JWT authentication, and backend architecture. I am looking for a Backend Developer Internship where I can apply my knowledge, learn from experienced developers, and contribute to building reliable and scalable applications.",
     location: "Krong Ta Khmao, Kandal, Cambodia",
     phone: "+855 16 568 335",
@@ -27,31 +27,35 @@ export const portfolioData = {
   },
 
   skills: {
+    flutterMobile: [
+      { name: "Flutter & Dart", level: 85, popular: true },
+      { name: "BLoC / Cubit", level: 82, popular: true },
+      { name: "REST API Integration", level: 85, popular: true },
+      { name: "Firebase", level: 80, popular: false },
+      { name: "Authentication", level: 82, popular: false },
+      { name: "Responsive UI", level: 85, popular: false },
+      { name: "State Management", level: 82, popular: false },
+      { name: "Google Maps Integration", level: 75, popular: false }
+    ],
     backend: [
-      { name: "Spring Boot / Java", level: 88, popular: true },
-      { name: "Node.js / Express.js", level: 85, popular: true },
-      { name: "RESTful API Design", level: 92, popular: true },
-      { name: "Spring Data JPA / Hibernate", level: 84, popular: false },
-      { name: "JWT Authentication & Security", level: 86, popular: false }
+      { name: "Java / Spring Boot", level: 75, popular: false },
+      { name: "Node.js / Express.js", level: 78, popular: false },
+      { name: "RESTful API Design", level: 80, popular: false },
+      { name: "JWT Authentication", level: 78, popular: false },
+      { name: "API Integration", level: 85, popular: false }
     ],
     databases: [
-      { name: "PostgreSQL", level: 85, popular: true },
-      { name: "MongoDB & Mongoose", level: 88, popular: true },
-      { name: "SQL & Relational DBs", level: 86, popular: false },
-      { name: "Firebase", level: 80, popular: false }
-    ],
-    frontendMobile: [
-      { name: "Flutter & Dart", level: 85, popular: true },
-      { name: "React.js", level: 82, popular: true },
-      { name: "Tailwind CSS", level: 86, popular: false },
-      { name: "HTML5, CSS3 & JavaScript", level: 88, popular: false },
-      { name: "UI/UX Prototyping", level: 80, popular: false }
+      { name: "PostgreSQL", level: 75, popular: false },
+      { name: "MongoDB", level: 78, popular: false },
+      { name: "SQL & Relational DBs", level: 75, popular: false },
+      { name: "Firebase Firestore", level: 75, popular: false }
     ],
     toolsWorkflow: [
-      { name: "Git & GitHub", level: 90, popular: true },
-      { name: "Postman (API Testing)", level: 92, popular: true },
-      { name: "Figma", level: 82, popular: false },
-      { name: "Antigravity & VS Code", level: 88, popular: false }
+      { name: "Git & GitHub", level: 85, popular: true },
+      { name: "Postman", level: 85, popular: false },
+      { name: "Figma", level: 78, popular: false },
+      { name: "VS Code", level: 90, popular: false },
+      { name: "Android Studio", level: 80, popular: false }
     ]
   },
 
@@ -211,7 +215,6 @@ export const portfolioData = {
         "Type-Safe Frontend: Fully typed TypeScript codebase on the Next.js client for maintainable and error-free UI development"
       ],
       metrics: "Spring Boot · Next.js · PostgreSQL · Full CRUD",
-      liveUrl: "https://github.com/Limpeav",
       githubUrl: "https://github.com/Limpeav",
       featured: true
     },
@@ -246,7 +249,6 @@ export const portfolioData = {
         "Consistent FoodPanda brand system: #FF2B85 pink primary, Panda mascot, custom bottom nav bar with active-state highlighting"
       ],
       metrics: "4 Screens · Full Bottom Nav · FoodPanda Brand System",
-      liveUrl: "https://github.com/Limpeav",
       githubUrl: "https://github.com/Limpeav",
       featured: true
     },
@@ -266,7 +268,6 @@ export const portfolioData = {
         "Modern Dark UI: Glassmorphism-inspired dark theme with stat cards, gradient accents, animated sidebar navigation, and responsive layout"
       ],
       metrics: "2 Roles · 24 Rooms · Live Matrix · Daily Revenue Report",
-      liveUrl: "https://github.com/Limpeav/Hotel-Mangement",
       githubUrl: "https://github.com/Limpeav/Hotel-Mangement",
       featured: true
     },
@@ -283,7 +284,6 @@ export const portfolioData = {
         "Normalized MySQL relational schema for high-performance student query retrieval"
       ],
       metrics: "Interactive Lessons & Quizzes",
-      liveUrl: "https://github.com/Limpeav",
       githubUrl: "https://github.com/Limpeav",
       featured: true
     }
@@ -292,20 +292,21 @@ export const portfolioData = {
   experience: [
     {
       type: "experience",
-      label: "Academic Projects",
-      period: "2023 — 2024",
-      role: "Academic Project Lead — E-Commerce & Task Management",
-      company: "Academic Project Initiatives",
+      label: "Academic Research Project · PCHUNCHANACSAMAI CO., LTD.",
+      period: "2025 — 2026",
+      role: "Full-Stack Developer — Cherish Baby E-Commerce Platform",
+      company: "PCHUNCHANACSAMAI CO., LTD.",
       location: "Phnom Penh, Cambodia",
-      description: "Led and contributed to university software projects involving web applications, mobile applications, and REST API integration.",
+      description: "Designed and developed a full-stack e-commerce platform for baby products as an applied research thesis, combining web, mobile, AI-powered sentiment analysis, real-time payments, and delivery management.",
       achievements: [
-        "Designed and implemented REST APIs connecting web and Flutter mobile applications.",
-        "Developed mobile features using Flutter and Dart, including API integration and state management.",
-        "Integrated Bakong KHQR payment and Google Maps location services in an e-commerce project.",
-        "Used Postman to test and validate REST API endpoints.",
-        "Collaborated with team members using Git and GitHub throughout project development."
+        "Built a full-stack e-commerce platform using React, Node.js, Express.js, MongoDB, and Flutter, supporting customer web, admin dashboard, and mobile applications.",
+        "Developed a bilingual Khmer/English sentiment analysis system to classify customer reviews as Positive, Neutral, or Negative.",
+        "Integrated Bakong KHQR payments with payment verification and Telegram transaction notifications.",
+        "Implemented Google Maps delivery features, including interactive location pinning and reverse geocoding for address management.",
+        "Developed the Flutter mobile application using BLoC architecture, with offline caching, GPS location, QR payments, and dark/light theme support.",
+        "Built a real-time admin dashboard using Socket.io with sales analytics, inventory management, batch tracking, and product expiry alerts."
       ],
-      technologies: ["Flutter", "Dart", "Node.js", "Express.js", "React.js", "MongoDB", "Postman"]
+      technologies: ["React 19", "Node.js", "Express.js", "MongoDB", "Flutter", "Dart", "BLoC", "Socket.io", "Tailwind CSS", "Bakong KHQR", "Google Maps API", "JWT", "Cloudinary", "Vite"]
     },
     {
       type: "education",

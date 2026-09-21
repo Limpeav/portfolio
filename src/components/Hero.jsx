@@ -35,7 +35,25 @@ function useTypewriter(words, speed = 80, delay = 1500) {
 }
 
 export default function Hero({ personal }) {
-  const typedRole = useTypewriter(['Backend Developer', 'Flutter Developer'], 80, 1500);
+  const typedRole = useTypewriter(['Flutter Developer', 'Backend Developer'], 80, 1500);
+
+  const statusMessages = [
+    'Available for Flutter Developer Internship',
+    'Available for Backend Developer Internship',
+  ];
+  const [statusIndex, setStatusIndex] = useState(0);
+  const [statusVisible, setStatusVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setStatusVisible(false);
+      setTimeout(() => {
+        setStatusIndex((prev) => (prev + 1) % statusMessages.length);
+        setStatusVisible(true);
+      }, 400);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const [isDownloadingCV, setIsDownloadingCV] = useState(false);
 
@@ -87,9 +105,9 @@ export default function Hero({ personal }) {
       <div className="container hero-container">
         <div className="hero-content">
           {/* Status Badge */}
-          <div className="status-pill">
+          <div className={`status-pill status-pill-animated${statusVisible ? ' status-pill-visible' : ' status-pill-hidden'}`}>
             <span className="status-dot" />
-            <span className="status-text">{personal.status}</span>
+            <span className="status-text">{statusMessages[statusIndex]}</span>
           </div>
 
           {/* Heading */}
@@ -108,7 +126,7 @@ export default function Hero({ personal }) {
 
           {/* Tagline */}
           <p className="hero-description">
-            {personal.tagline} Specializing in high-performance web systems, responsive interactive UI, and robust cloud architectures.
+            {personal.tagline}
           </p>
 
           {/* Action CTAs */}

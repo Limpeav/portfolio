@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import { Cpu, Layout, Server, Cloud, Boxes, Check } from 'lucide-react';
+import { Cpu, Smartphone, Server, Cloud, Boxes, Check } from 'lucide-react';
 import './Skills.css';
 
 export default function Skills({ skills }) {
   const [activeTab, setActiveTab] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Skills', icon: <Cpu size={16} /> },
-    { id: 'backend', label: 'Backend & APIs', icon: <Server size={16} /> },
-    { id: 'databases', label: 'Databases', icon: <Boxes size={16} /> },
-    { id: 'frontendMobile', label: 'Mobile & Frontend', icon: <Layout size={16} /> },
-    { id: 'toolsWorkflow', label: 'Tools & Workflow', icon: <Cloud size={16} /> }
+    { id: 'all',           label: 'All Skills',       icon: <Cpu size={16} /> },
+    { id: 'flutterMobile', label: 'Flutter & Mobile',  icon: <Smartphone size={16} /> },
+    { id: 'backend',       label: 'Backend & APIs',    icon: <Server size={16} /> },
+    { id: 'databases',     label: 'Databases',         icon: <Boxes size={16} /> },
+    { id: 'toolsWorkflow', label: 'Tools & Workflow',  icon: <Cloud size={16} /> }
   ];
 
   // Get skills to display based on active tab
   const getDisplaySkills = () => {
     if (activeTab === 'all') {
       return [
-        ...(skills.backend || []).map(s => ({ ...s, category: 'Backend' })),
-        ...(skills.databases || []).map(s => ({ ...s, category: 'Databases' })),
-        ...(skills.frontendMobile || []).map(s => ({ ...s, category: 'Mobile & Frontend' })),
-        ...(skills.toolsWorkflow || []).map(s => ({ ...s, category: 'Tools' }))
+        ...(skills.flutterMobile || []).map(s => ({ ...s, category: 'Flutter & Mobile' })),
+        ...(skills.toolsWorkflow || []).map(s => ({ ...s, category: 'Tools' })),
+        ...(skills.backend || []).map(s => ({ ...s, category: 'Backend & APIs' })),
+        ...(skills.databases || []).map(s => ({ ...s, category: 'Databases' }))
       ];
     }
     const catSkills = skills[activeTab] || [];
@@ -96,19 +96,19 @@ export default function Skills({ skills }) {
         <div className="stack-overview-footer glass-card">
           <div className="stack-item">
             <span className="stack-bullet"><Check size={14} /></span>
-            <span>Spring Boot, Spring Data JPA & Hibernate ORM</span>
+            <span>Flutter & Dart — Cross-platform mobile app development</span>
           </div>
           <div className="stack-item">
             <span className="stack-bullet"><Check size={14} /></span>
-            <span>RESTful API Architecture & Postman Test Suites</span>
+            <span>BLoC / Cubit state management & REST API integration</span>
           </div>
           <div className="stack-item">
             <span className="stack-bullet"><Check size={14} /></span>
-            <span>PostgreSQL Relational & MongoDB Document Stores</span>
+            <span>Firebase, Authentication & Google Maps integration</span>
           </div>
           <div className="stack-item">
             <span className="stack-bullet"><Check size={14} /></span>
-            <span>Multiplatform Clients with Flutter (Mobile) and React.js (Web)</span>
+            <span>Backend support — Java / Spring Boot, Node.js, PostgreSQL & MongoDB</span>
           </div>
         </div>
       </div>
