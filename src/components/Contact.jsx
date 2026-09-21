@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, Copy, Check, Sparkles, MapPin, Clock, Phone } from 'lucide-react';
+import { Mail, Send, Copy, Check, Sparkles, MapPin, Phone } from 'lucide-react';
 import { GithubIcon, TelegramIcon, PhoneIcon } from './SocialIcons';
 import confetti from 'canvas-confetti';
 import './Contact.css';
@@ -125,16 +125,6 @@ export default function Contact({ personal }) {
                         {personal.phone || '+855 16 568 335'}
                       </a>
                     </div>
-                  </div>
-                </div>
-
-                <div className="contact-meta-item">
-                  <div className="meta-icon-box">
-                    <Clock size={18} />
-                  </div>
-                  <div>
-                    <div className="meta-label">Timezone & Response</div>
-                    <div className="meta-val">Indochina Time (ICT, UTC+7) · Fast Reply</div>
                   </div>
                 </div>
               </div>
